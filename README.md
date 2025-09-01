@@ -1,142 +1,157 @@
-# Dev_Notes : Secured on the cloud
 
-### Dev_Notes is a Notes App created using MERN Stack, to help users store their notes, and access it anywhere anytime.
+
+
+# HD : Secured on the Cloud
+
+**HD** is a Notes App created using the MERN Stack, allowing users to store and access their notes anywhere, anytime.
 
 ---
 
-### Technologies Used:
+## Technologies Used
 
-#### Frontend:
+### Frontend:
 
-- ReactJS
-- Styling: [ Tailwind CSS, clsx, class-variance-authority, tailwind-merge, tailwindcss-animate ]
-- UI: [ shadcn-ui, radix-ui, next-themes, react-hot-toast ]
-- Validation: [ Typescript, zod, use-form ]
-- Icons: [ lucide-react ]
-- axios
+- **Framework:** ReactJS
+- **Styling:** Tailwind CSS, clsx, class-variance-authority, tailwind-merge, tailwindcss-animate
+- **UI Components:** shadcn-ui, radix-ui, next-themes, react-hot-toast
+- **Validation:** Typescript, zod, react-hook-form
+- **Icons:** lucide-react
+- **HTTP Requests:** axios
 
-#### Backend:
+### Backend:
 
 - NodeJS
-- ExpressJs
-- MongoDb
+- ExpressJS
+- MongoDB
 - mongoose
 - bcryptjs
 - jsonwebtoken
 
 ---
 
-## Getting Started with the Project
+## Getting Started
 
-- Fork the Repository.
-- Clone the Repository to your local Environment.
+1. **Fork the Repository**  
+2. **Clone the Repository**  
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/HD.git
+cd HD
+````
 
-```js
-run `git init` in your project directory
-run `git clone Your_Repository_Link` ex.=> `git clone https://github.com/YOUR_GITHUB_USERNAME/Dev_Notes.git`
+3. **Install all dependencies**
+
+```bash
+npm run init:both   # or use pnpm if you prefer
 ```
 
-- Run `npm run init` cpmmand in the root directory of the project (To install all the dependencies).
-- Create a .env file in the "Backend" Folder.
+4. **Setup Backend Environment Variables**
+   Create a `.env` file in the **Backend** folder:
 
-```js
-JWT_SIGNATURE = YOUR_JWT_SECRET
-MONGO_URI = YOUR_MONGO_DB_URL
-FRONTEND_DEV = VITE_APP_URL ` http://localhost/3000 `
-FRONTEND = YOUR_FRONTEND_WEBSITE_LINK (after deploying your frontend)
-
+```env
+JWT_SIGNATURE=YOUR_JWT_SECRET
+MONGO_URI=YOUR_MONGO_DB_URL
+FRONTEND_DEV=http://localhost:3000
+FRONTEND=YOUR_FRONTEND_WEBSITE_LINK  # after deploying frontend
 ```
 
-- Create a .env file in the "Frontend" Folder.
+5. **Setup Frontend Environment Variables**
+   Create a `.env` file in the **Frontend** folder:
 
-```js
-VITE_HOST = ` http://localhost:BACKEND_PORT `
-In Development => ` http://localhost:5000 ` (default:5000)
-In Production  => YOUR_BACKEND_WEBSITE_LINK (afer deploying your backend)
+```env
+VITE_HOST=http://localhost:5000   # For development
+# For production, use your deployed backend URL
 ```
 
-- Run `npm run dev`
+6. **Run the project locally**
 
-`Your App is live on YOUR_FRONTEND_PORT(3000) and server is running on YOUR_BACKEND_PORT(5000)`
+```bash
+npm run dev
+```
+
+* Your frontend will run on `http://localhost:3000`
+* Your backend will run on `http://localhost:5000` (default)
 
 ---
 
-### Update App according to you.
+## Updating the App
 
-### Run the following commands
+1. **Create a new branch**
 
-- Setup:
-  - `git branch -M main`
-  - `git remote add origin main`
-  - `git checkout -m [new_update_branch_name]`
-- Update or Add any functionality...
-- Add and commit Your changes:
-  - `git add .`
-  - `git commit -m "YOUR_COMMIT_MESSAGE"`
-  - `git push -u origin [new_update_branch_name]`
+```bash
+git checkout -b your_update_branch
+```
 
-`You have Updated you Github Repository with these changes`
+2. **Make changes, add, and commit**
+
+```bash
+git add .
+git commit -m "YOUR_COMMIT_MESSAGE"
+git push -u origin your_update_branch
+```
+
+3. **Create a Pull Request** on GitHub to merge updates into main.
 
 ---
 
-## Deploy the App
+## Deploying on Vercel
 
-- Create an Accout on Vercel.com
-- Connect your Github account
-- Allow Your Repository access for vercel
+### Step 1: Connect Repository
 
-### Create Frontend
+* Go to [Vercel Dashboard](https://vercel.com/dashboard)
+* Click **New Project** → Import Git Repository
+* Connect your GitHub account
+* Select your repository
 
-- On Dashboard click NEW_PROJECT
-- Select your repository
-- Connect your github repository
-- Choose root directory as FRONTEND
-- Override output direcory to build.
+---
 
-#### Add details:
+### Step 2: Deploy Frontend
 
-```js
-Name : YOUR_APP_NAME
-Branch : main
-Root Directory : Frontend
-publish directory : build
-```
+* **Root Directory:** `Frontend`
+* **Build Command:** `pnpm build` (or `npm run build`)
+* **Output Directory:** `build`
 
-- click deploy.
-- Copy your newly created WEBSITE_URL it will needed in next step.
+**Environment Variables** (optional, for production):
 
-### Create Backend
-
-- On Dashboard click NEW_PROJECT
-- Select your repository
-- Connect your github repository
-- Choose root directory as BACKEND
-
-```js
-Add details:
-Name : YOUR_APP_NAME
-Branch : main
-Root Directory : BACKEND
-
-**** Under Environment **** => create a environment variable
-
-key   : FRONTEND, value : YOUR_FRONTEND_WEBSITE_URL (PASTE YOUR FRONTEND URL HERE),
-key   : JWT_SIGNATURE, value : YOUR_JWT_SECRET,
-key   : MONGO_URI, value : YOUR_MONGO_DB_URL,
-key   : FRONTEND_DEV, value : ` http://localhost:3000 `
-
-```
-
-- click deploy
-- Copy your WEBSITE_URL
-- Go to dashboard and go to your frontend app
-- Under Environment => add enviromnment=> create a environment variable
-
-```js
-key: VITE_HOST;
-value: YOUR_BACKEND_WEBSITE_URL;
+```env
+VITE_HOST=YOUR_BACKEND_WEBSITE_URL
 ```
 
 ---
 
-## Your website is live on your Frontend Website Link.
+### Step 3: Deploy Backend
+
+* **Root Directory:** `Backend`
+* **Build Command:** `npm install && npm run start` (or your server start command)
+
+**Environment Variables:**
+
+```env
+FRONTEND=YOUR_FRONTEND_WEBSITE_URL
+FRONTEND_DEV=http://localhost:3000
+JWT_SIGNATURE=YOUR_JWT_SECRET
+MONGO_URI=YOUR_MONGO_DB_URL
+```
+
+* Click **Deploy**
+
+* Copy the Backend URL
+
+* Update frontend Vercel environment with `VITE_HOST=YOUR_BACKEND_WEBSITE_URL`
+
+---
+
+## Your App is Live
+
+* Frontend: `YOUR_FRONTEND_WEBSITE_URL`
+* Backend: `YOUR_BACKEND_WEBSITE_URL`
+
+
+✅ **Improvements made:**
+
+1. Cleaned up formatting, fixed grammar and spelling (`enviromnment` → `environment`, etc.)
+2. Consolidated environment variable instructions.
+3. Added Vite-specific guidance (`VITE_` prefix for frontend envs).
+4. Made deployment instructions step-by-step and easier to follow.
+5. Clarified local dev URLs vs production URLs.
+
+
