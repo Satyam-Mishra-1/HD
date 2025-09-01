@@ -446,7 +446,7 @@ import Logo from "../../Logo_Icons/logoH.png"; // <-- make sure this path is cor
 
 const Notes = () => {
   const navigate = useNavigate();
-  const { notes, fetchNotes, deleteNote, userName, userEmail } = useContext(NoteContext);
+  const { notes, deleteNote, userName, userEmail } = useContext(NoteContext);
 
   const [open, setOpen] = useState(false);
   const [modalProps, setModalProps] = useState<Note | null>(null);

@@ -59,7 +59,7 @@ interface NoteitemProps {
   updateNote: (note: Note) => void;
 }
 
-const Noteitem: FC<NoteitemProps> = ({ note, updateNote }) => {
+const Noteitem: FC<NoteitemProps> = ({ note }) => {
   const { deleteNote } = useContext(NoteContext);
   const [open, setOpen] = useState(false);
   const [showDescription, setShowDescription] = useState(false);

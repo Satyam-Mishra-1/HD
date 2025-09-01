@@ -14,7 +14,7 @@
     "preview": "pnpm init:both && concurrently \"pnpm preview:server\" \"pnpm preview:client\""
   },
   "keywords": [],
-  "author": "Dhawal Vijayvargiya",
+  "author": "Satyam Mishra",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.2.1"
