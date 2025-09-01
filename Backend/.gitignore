@@ -1,0 +1,59 @@
+# Node modules
+node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build folders
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Firebase service account (if accidentally kept)
+serviceAccountKey.json
+
+# Misc
+*.bak
+*.swp
+*.tmp
+*.seed.js
+
+# Optional: coverage folder if using Jest
+coverage/
+
+# Optional: lock files (if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Mac/Linux swap files
+*.swp
+*~
+
+# Optional: Node REPL history
+.node_repl_history
