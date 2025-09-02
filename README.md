@@ -162,7 +162,3 @@ VITE_HOST=YOUR_BACKEND_WEBSITE_URL
 * Frontend: `YOUR_FRONTEND_WEBSITE_URL`
 * Backend: `YOUR_BACKEND_WEBSITE_URL`
 
----
-
-Do you want me to do that?
-```
