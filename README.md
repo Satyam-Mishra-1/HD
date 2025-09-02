@@ -1,6 +1,4 @@
 
-
-
 # HD : Secured on the Cloud
 
 **HD** is a Notes App created using the MERN Stack, allowing users to store and access their notes anywhere, anytime.
@@ -11,32 +9,46 @@
 
 ### Frontend:
 
-- **Framework:** ReactJS
-- **Styling:** Tailwind CSS, clsx, class-variance-authority, tailwind-merge, tailwindcss-animate
-- **UI Components:** shadcn-ui, radix-ui, next-themes, react-hot-toast
-- **Validation:** Typescript, zod, react-hook-form
-- **Icons:** lucide-react
-- **HTTP Requests:** axios
+- **Framework:** ReactJS  
+- **Styling:** Tailwind CSS, clsx, class-variance-authority, tailwind-merge, tailwindcss-animate  
+- **UI Components:** shadcn-ui, radix-ui, next-themes, react-hot-toast  
+- **Validation:** Typescript, zod, react-hook-form  
+- **Icons:** lucide-react  
+- **HTTP Requests:** axios  
+
+![Frontend Screenshot](./images/img8.png) 
+![Frontend Screenshot](./images/img7.png)
+![Frontend Screenshot](./images/img1.png)
+![Frontend Screenshot](./images/img2.png)
+![Frontend Screenshot](./images/img3.png)
+![Frontend Screenshot](./images/img4.png)
+![Frontend Screenshot](./images/img5.png)
+![Frontend Screenshot](./images/img6.png)
+![Frontend Screenshot](./images/img9.png)
+  
 
 ### Backend:
 
-- NodeJS
-- ExpressJS
-- MongoDB
-- mongoose
-- bcryptjs
-- jsonwebtoken
+- NodeJS  
+- ExpressJS  
+- MongoDB  
+- mongoose  
+- bcryptjs  
+- jsonwebtoken  
+
 
 ---
 
 ## Getting Started
 
 1. **Fork the Repository**  
+
 2. **Clone the Repository**  
 ```bash
 git clone https://github.com/YOUR_GITHUB_USERNAME/HD.git
 cd HD
 ````
+
 
 3. **Install all dependencies**
 
@@ -68,8 +80,9 @@ VITE_HOST=http://localhost:5000   # For development
 npm run dev
 ```
 
-* Your frontend will run on `http://localhost:3000`
-* Your backend will run on `http://localhost:5000` (default)
+
+* Frontend: `http://localhost:3000`
+* Backend: `http://localhost:5000` (default)
 
 ---
 
@@ -90,6 +103,7 @@ git push -u origin your_update_branch
 ```
 
 3. **Create a Pull Request** on GitHub to merge updates into main.
+
 
 ---
 
@@ -133,10 +147,13 @@ MONGO_URI=YOUR_MONGO_DB_URL
 ```
 
 * Click **Deploy**
-
 * Copy the Backend URL
+* Update frontend Vercel environment with:
 
-* Update frontend Vercel environment with `VITE_HOST=YOUR_BACKEND_WEBSITE_URL`
+```env
+VITE_HOST=YOUR_BACKEND_WEBSITE_URL
+```
+
 
 ---
 
@@ -145,13 +162,7 @@ MONGO_URI=YOUR_MONGO_DB_URL
 * Frontend: `YOUR_FRONTEND_WEBSITE_URL`
 * Backend: `YOUR_BACKEND_WEBSITE_URL`
 
+---
 
-✅ **Improvements made:**
-
-1. Cleaned up formatting, fixed grammar and spelling (`enviromnment` → `environment`, etc.)
-2. Consolidated environment variable instructions.
-3. Added Vite-specific guidance (`VITE_` prefix for frontend envs).
-4. Made deployment instructions step-by-step and easier to follow.
-5. Clarified local dev URLs vs production URLs.
-
-
+Do you want me to do that?
+```
